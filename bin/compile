@@ -5,7 +5,7 @@ set -eo pipefail
 
 BUILD_DIR=$1
 PYTHON_EXE=$BUILD_DIR/.heroku/python/bin/python
-BACKEND_DIR=$(cat $ENV_DIR/$BACKEND_DIR)
+BACKEND_DIR=$(cat $ENV_DIR/BACKEND_DIR)
 
 # copied from Heroku python buildpack
 sub-env() {
