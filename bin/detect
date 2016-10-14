@@ -2,8 +2,11 @@
 
 BUILD_DIR=$1
 
+cat $ENV_DIR/BACKEND_DIR
+$BACKEND_DIR=$(cat $ENV_DIR/$BACKEND_DIR)
+
 # exit early if app is not Django
-if [ ! -f $BUILD_DIR/requirements.txt ] && [ ! -f $BUILD_DIR/manage.py ]; then
+if [ ! -f $BUILD_DIR/requirements.txt ] && [ ! -f $ENV_DIR/$BACKEND_DIR/manage.py ]; then
     exit 1
 fi
 
